@@ -50,7 +50,7 @@ namespace ProcessorDB
                 TechProcessComboBox.ItemsSource = new[] { "4nm", "5nm", "7nm", "10nm", "14nm", "22nm", "28nm", "45nm" };
                 CacheL3ComboBox.ItemsSource = new[] { "1MB", "2MB", "4MB", "6MB", "8MB", "12MB", "16MB", "18MB", "24MB", "30MB", "32MB", "64MB", "96MB" };
                 CoresComboBox.ItemsSource = new[] { 2, 4, 6, 8, 12, 16, 24, 32, 64 };
-                SlotComboBox.ItemsSource = new[] { "LGA 1151", "AM4", "LGA 1700", "LGA 2066", "TR4", "sTRX4", "AM5" };
+                SlotComboBox.ItemsSource = new[] { "LGA 1151", "AM4", "LGA 1700", "AM5" };
                 WarrantyComboBox.ItemsSource = new[] { 12, 24, 36, 48, 60 };
             }
             catch (Exception ex)
