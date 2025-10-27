@@ -24,32 +24,7 @@ ProcessorDB - Курсовой проект на .NET Framework
 Классический WPF-интерфейс с меню, статус-баром, горячими клавишами (Ctrl+N, Ctrl+E, Del) и контекстным меню.
 Проект соответствует требованиям: Code First подход в EF Core, не менее 5 таблиц, асинхронность, WPF с темами, поиск/фильтры/отчёты.
 
-Схема базы данных (ER-диаграмма)
-+-----------------+     1:1 (FK: ProcessorId)     +-----------------+
-| ProductionInfo  | -------------------------------> |   Processor     |
-+-----------------+                                 +-----------------+
-                                                    |
-                                                    | N:1 (FK: CountryId)
-                                                    ↓
-                                                +-----------------+
-                                                |    Country      |
-                                                +-----------------+
 
-+-----------------+     1:1 (FK: ProcessorId)     +-----------------+
-|   TechSpec      | -------------------------------> |   Processor     |
-+-----------------+                                 +-----------------+
-                                                    |
-                                                    | N:1 (FK: ManufacturerId)
-                                                    ↓
-                                                +-----------------+
-                                                |  Manufacturer   |
-                                                +-----------------+
-Processor: Основная таблица (Id, Name, Model, ManufacturerId, CountryId, ReleaseYear).
-Manufacturer: Справочник производителей (Id, Name).
-Country: Справочник стран (Id, Name).
-TechSpec: Технические specs (Id, ProcessorId, TechProcess, Frequency, CacheL3, Cores, Slot).
-ProductionInfo: Производственная info (Id, ProcessorId, ProductionDate, WarrantyPeriod, Price, Points, Promotion).
-Backup БД: Файл processors.db (SQLite) генерируется автоматически в папке проекта при первом запуске.
 
 Требования к запуску
 ОС: Windows 10/11.
